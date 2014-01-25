@@ -13,9 +13,9 @@ public class FieldOfView : MonoBehaviour {
 	
 	}
 
-	/*void OnTriggerEnter(Collider2D other){
+	void OnTriggerEnter2D(Collider2D other){
 		if(other.tag == "Player"){
-
+			transform.parent.GetComponent<DoctorMove>().PlayerDetected();
 		}
-	}*/
+	}
 }
