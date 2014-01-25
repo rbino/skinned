@@ -10,11 +10,10 @@ public class Fingers : MonoBehaviour {
 
 	private float speedModule = 0.1f;
 	private Vector3 speedDirection = new Vector3(-1, 0, 0);
-	private const float offset = 0.01f;
+	private const float offset = 0.085f;
 	private float oppositeForceModule;
 	private Vector3 oppositeForceDirection = new Vector3(1, 0, 0);
 	private bool insert = false;
-	private bool tillTheEnd = false;
 
 	// Use this for initialization
 	void Start () {
@@ -32,9 +31,6 @@ public class Fingers : MonoBehaviour {
 			UpdateOppositeForceModule();
 			transform.position = transform.position + (oppositeForceDirection * oppositeForceModule);
 		}
-		if (tillTheEnd) {
-			//Winning condition
-		}
 	}
 
 	private void UpdateOppositeForceModule () {
@@ -50,7 +46,7 @@ public class Fingers : MonoBehaviour {
 			}
 		}
 		if (other.gameObject.name.Equals("DeepThroat")) {
-			tillTheEnd = true;
+			Debug.Log("End");
 		}
 	}
 
@@ -58,7 +54,7 @@ public class Fingers : MonoBehaviour {
 		if (other.gameObject.name.Equals("Mouth")) {
 			if (insert) {
 				insert = false;
-				speedModule = 0;
+				oppositeForceModule = 0;
 			}
 		}
 	}
