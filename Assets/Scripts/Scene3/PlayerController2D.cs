@@ -9,6 +9,7 @@ public class PlayerController2D : MonoBehaviour {
 	public float xSmooth;
 
 	public Transform PlayerInitialPos;
+	public Transform DoorAnimation;
 
 	bool moved = false;
 	bool nearDoor = false;
@@ -31,11 +32,13 @@ public class PlayerController2D : MonoBehaviour {
 			if(Input.GetKey(KeyCode.RightArrow)){
 
 				rigidbody2D.velocity = new Vector2(speed, 0);
+				GetComponent<CharacterAnimationController>().StartMoveRight();
 
 			}
 
 			if(Input.GetKeyUp(KeyCode.RightArrow)){
 				rigidbody2D.velocity = new Vector2(0, 0);
+				//GetComponent<CharacterAnimationController>().StopMoving();
 			}
 
 			if(Input.GetKey(KeyCode.LeftArrow)){
@@ -52,6 +55,8 @@ public class PlayerController2D : MonoBehaviour {
 				collider2D.enabled = false;
 				renderer.enabled = false;
 
+				DoorAnimation.GetComponent<DoorAnimationControl>().OpenDoor();
+
 			}
 
 		}
@@ -59,6 +64,8 @@ public class PlayerController2D : MonoBehaviour {
 			if(Input.GetKey(KeyCode.DownArrow)){
 				collider2D.enabled = true;
 				renderer.enabled = true;
+
+				DoorAnimation.GetComponent<DoorAnimationControl>().OpenDoor();
 			}
 		}
 	}
