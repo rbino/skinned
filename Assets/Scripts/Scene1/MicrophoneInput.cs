@@ -6,7 +6,7 @@ public class MicrophoneInput : MonoBehaviour {
 	private string device;
 	private AudioClip clipRecord;
 	private float[] avg;
-	private int avgSize = 10;
+	private int avgSize = 25;
 	private int ix = 0;
 	private float avgSum = 0;
 	float min=100f;
@@ -14,8 +14,9 @@ public class MicrophoneInput : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		if (device == null)
-			device = Microphone.devices[0];
+		if (device == null) {
+			device = Microphone.devices [0];
+		}
 		clipRecord = Microphone.Start(device, true, 999, 44100);
 		avg = new float[avgSize];
 		/*
