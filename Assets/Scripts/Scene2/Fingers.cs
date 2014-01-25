@@ -2,7 +2,8 @@
 using System.Collections;
 
 public class Fingers : MonoBehaviour {
-
+	
+	public GameObject face;
 	public GameObject start;
 	public GameObject end;
 	private float startX;
@@ -43,6 +44,7 @@ public class Fingers : MonoBehaviour {
 		if (other.gameObject.name.Equals("Mouth")) {
 			if (!insert) {
 				insert = true;
+				face.GetComponent<Face>().ChangeSprite();
 			}
 		}
 		if (other.gameObject.name.Equals("DeepThroat")) {
@@ -55,6 +57,7 @@ public class Fingers : MonoBehaviour {
 			if (insert) {
 				insert = false;
 				oppositeForceModule = 0;
+				face.GetComponent<Face>().ChangeSprite();
 			}
 		}
 	}
