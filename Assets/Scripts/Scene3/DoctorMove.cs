@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class FieldOfView : MonoBehaviour {
+public class DoctorMove : MonoBehaviour {
+
+	public GameObject FieldOfView;
+	public Transform begin, end;
 
 	// Use this for initialization
 	void Start () {
@@ -10,12 +13,6 @@ public class FieldOfView : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
-	}
-
-	void OnTriggerEnter(Collider2D other){
-		if(other.tag == "Player"){
-
-		}
+		
 	}
 }
