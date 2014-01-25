@@ -8,7 +8,10 @@ public class PlayerController2D : MonoBehaviour {
 	public float startTime;
 	public float xSmooth;
 
+	public Transform PlayerInitialPos;
+
 	bool moved = false;
+	bool nearDoor = false;
 
 	Vector3 initialPos, finalPos;
 
@@ -23,28 +26,45 @@ public class PlayerController2D : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if(Input.GetKey(KeyCode.RightArrow) && !moved){
+		if(!moved && renderer.enabled){
 
-			moved = true;
-			initialPos = transform.position;
-			finalPos = new Vector3(initialPos.x + DeltaMove, initialPos.y, 
-			                       initialPos.z);
-			startTime = Time.time;
+			if(Input.GetKey(KeyCode.RightArrow)){
 
-			move ();
 
+				moved = true;
+				initialPos = transform.position;
+				finalPos = new Vector3(initialPos.x + DeltaMove, initialPos.y, 
+				                       initialPos.z);
+				startTime = Time.time;
+
+				move ();
+
+
+			}
+
+			if(Input.GetKey(KeyCode.LeftArrow)){
+
+				moved = true;
+				initialPos = transform.position;
+				finalPos = new Vector3(initialPos.x - DeltaMove, initialPos.y, 
+				                       initialPos.z);
+				startTime = Time.time;
+
+				move ();
+			}
+
+			if(Input.GetKey(KeyCode.UpArrow) && nearDoor){
+				collider2D.enabled = false;
+				renderer.enabled = false;
+
+			}
 
 		}
-
-		if(Input.GetKey(KeyCode.LeftArrow) && !moved){
-
-			moved = true;
-			initialPos = transform.position;
-			finalPos = new Vector3(initialPos.x - DeltaMove, initialPos.y, 
-			                       initialPos.z);
-			startTime = Time.time;
-
-			move ();
+		else{
+			if(Input.GetKey(KeyCode.DownArrow)){
+				collider2D.enabled = true;
+				renderer.enabled = true;
+			}
 		}
 	}
 
@@ -60,11 +80,19 @@ public class PlayerController2D : MonoBehaviour {
 		float distCovered = (Time.time - startTime) * speed;
 		float fracJourney = distCovered / DeltaMove;
 		
-		transform.position = Vector3.Lerp(initialPos, finalPos, Time.deltaTime*xSmooth);
+		transform.position = Vector3.Lerp(initialPos, finalPos, fracJourney);
 
 		if(transform.position == finalPos){
 			moved = false;
 		}
+	}
+
+	public void NearDoor(bool cond){
+		nearDoor = cond;
+	}
+
+	public void ResetPlayerPosition(){
+		transform.position = PlayerInitialPos.position;
 	}
 
 

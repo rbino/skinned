@@ -55,11 +55,11 @@ public class CameraMove : MonoBehaviour {
 
 	public void BeginMoveDown(){
 		startTime = Time.time;
-		//journeyLength = Vector3.Distance(startMarker.position, endMarker.position);
 		isMovingDown = true;
 
 		startMarker = transform.position;
 		endMarker = new Vector3(startMarker.x, startMarker.y - deltaY, startMarker.z);
+		journeyLength = Vector3.Distance(startMarker, endMarker);
 	}
 
 	void MoveDown(){
@@ -70,4 +70,5 @@ public class CameraMove : MonoBehaviour {
 		if(transform.position == endMarker)
 			isMovingDown = false;
 	}
+	
 }

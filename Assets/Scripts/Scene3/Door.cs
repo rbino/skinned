@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class FieldOfView : MonoBehaviour {
+public class Door : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -15,8 +15,13 @@ public class FieldOfView : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other){
 		if(other.tag == "Player"){
-			transform.parent.GetComponent<DoctorMove>().PlayerDetected();
-			other.transform.GetComponent<PlayerController2D>().ResetPlayerPosition();
+			other.GetComponent<PlayerController2D>().NearDoor(true);
+		}
+	}
+
+	void OnTriggerExit2D(Collider2D other){
+		if(other.tag == "Player"){
+			other.GetComponent<PlayerController2D>().NearDoor(false);
 		}
 	}
 }

@@ -47,7 +47,7 @@ public class DoctorMove : MonoBehaviour {
 		DoctorInitialPos.position = transform.position;
 
 		FieldOfViewMove = - FieldOfViewMove;
-		FieldOfViewAngle = -FieldOfViewAngle;
+		FieldOfViewAngle = - FieldOfViewAngle;
 
 		FieldOfView.position = new Vector3(FieldOfView.transform.position.x + FieldOfViewMove,
 		                                             FieldOfView.transform.position.y,
@@ -58,22 +58,22 @@ public class DoctorMove : MonoBehaviour {
 
 	public void PlayerDetected(){
 
-		if(state == DoctorState.Normal){
+		/*if(state == DoctorState.Normal){
 			ChangeSpeed();
 			state = DoctorState.Alert;
-		}else{
+		}else{*/
 			Debug.Log("catch player");
-		}
+		//}
 
 	}
 
 	void ChangeSpeed(){
-		Speed *= 2;
+		Speed += 0.1f;
 		Invoke ("NormalSpeed", TimeOutSpeed);
 	}
 
 	void NormalSpeed(){
-		Speed /= 2;
+		Speed -= 0.1f;
 	}
 
 	
