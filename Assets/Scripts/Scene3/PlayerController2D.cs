@@ -30,28 +30,23 @@ public class PlayerController2D : MonoBehaviour {
 
 			if(Input.GetKey(KeyCode.RightArrow)){
 
+				rigidbody2D.velocity = new Vector2(speed, 0);
 
-				moved = true;
-				initialPos = transform.position;
-				finalPos = new Vector3(initialPos.x + DeltaMove, initialPos.y, 
-				                       initialPos.z);
-				startTime = Time.time;
+			}
 
-				move ();
-
-
+			if(Input.GetKeyUp(KeyCode.RightArrow)){
+				rigidbody2D.velocity = new Vector2(0, 0);
 			}
 
 			if(Input.GetKey(KeyCode.LeftArrow)){
 
-				moved = true;
-				initialPos = transform.position;
-				finalPos = new Vector3(initialPos.x - DeltaMove, initialPos.y, 
-				                       initialPos.z);
-				startTime = Time.time;
-
-				move ();
+				rigidbody2D.velocity = new Vector2(-speed, 0);
 			}
+
+			if(Input.GetKeyUp(KeyCode.LeftArrow)){
+				rigidbody2D.velocity = new Vector2(0, 0);
+			}
+
 
 			if(Input.GetKey(KeyCode.UpArrow) && nearDoor){
 				collider2D.enabled = false;
