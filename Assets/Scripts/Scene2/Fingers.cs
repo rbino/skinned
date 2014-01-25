@@ -8,8 +8,9 @@ public class Fingers : MonoBehaviour {
 	private float startX;
 	private float endX;
 
-	private float speedModule = 0.05f;
+	private float speedModule = 0.1f;
 	private Vector3 speedDirection = new Vector3(-1, 0, 0);
+	private const float offset = 0.01f;
 	private float oppositeForceModule;
 	private Vector3 oppositeForceDirection = new Vector3(1, 0, 0);
 	private bool insert = false;
@@ -28,11 +29,18 @@ public class Fingers : MonoBehaviour {
 			transform.position = transform.position + (speedDirection * speedModule);
 		}
 		if (insert) {
-			//opposite force at work
+			UpdateOppositeForceModule();
+			transform.position = transform.position + (oppositeForceDirection * oppositeForceModule);
 		}
 		if (tillTheEnd) {
 			//Winning condition
 		}
+	}
+
+	private void UpdateOppositeForceModule () {
+		float fingersProgress = transform.position.x - startX;
+		float endDistance = endX - startX;
+		oppositeForceModule = (fingersProgress * (speedModule - offset)) / endDistance;
 	}
 
 	void OnTriggerEnter2D (Collider2D other) {
@@ -50,6 +58,7 @@ public class Fingers : MonoBehaviour {
 		if (other.gameObject.name.Equals("Mouth")) {
 			if (insert) {
 				insert = false;
+				speedModule = 0;
 			}
 		}
 	}
