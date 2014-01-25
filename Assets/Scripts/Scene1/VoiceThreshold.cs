@@ -3,7 +3,7 @@ using System.Collections;
 
 public class VoiceThreshold : MonoBehaviour {
 
-	public GUIText timer;
+	public GUIText counterText;
 	private int counter=0;
 
 	// Use this for initialization
@@ -19,12 +19,12 @@ public class VoiceThreshold : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other){
 
 	//	StartCoroutine (thresholdTimer());
-		timer.enabled = true;
+		counterText.enabled = true;
 		if (++counter >= 3){
 			counter = 0;
 			transform.position = new Vector3 (transform.position.x, transform.position.y + 0.4f, transform.position.z);
 		}
-		timer.text = "" + counter;
+		counterText.text = "" + counter;
 	}
 
 	void OnTriggerExit2D(Collider2D other){
@@ -33,12 +33,12 @@ public class VoiceThreshold : MonoBehaviour {
 	}
 
 	IEnumerator thresholdTimer(){
-		while (int.Parse(timer.text)>0) {
-			timer.text = (int.Parse(timer.text) - 1).ToString();
+		while (int.Parse(counterText.text)>0) {
+			counterText.text = (int.Parse(counterText.text) - 1).ToString();
 			yield return new WaitForSeconds(1.0f);
 		}
-		timer.enabled = false;
-		if (int.Parse (timer.text) == 0) {
+		counterText.enabled = false;
+		if (int.Parse (counterText.text) == 0) {
 			transform.position = new Vector3 (transform.position.x, transform.position.y + 0.5f, transform.position.z);
 		}
 		
