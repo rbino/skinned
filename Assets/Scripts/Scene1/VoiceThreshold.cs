@@ -13,6 +13,7 @@ public class VoiceThreshold : MonoBehaviour {
 	private int index=0;
 	public AudioSource noise;
 	public AudioClip scream;
+	bool mustChange=false;
 
 	// Use this for initialization
 	void Start () {
@@ -26,15 +27,20 @@ public class VoiceThreshold : MonoBehaviour {
 				backHome = true;
 			}
 		}
+		if (mustChange) {
+			if (!noise.isPlaying){
+				Application.LoadLevel("Act2Scene4");
+			}
+		}
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
 		square = other;
 		if (backHome){
 			backHome = false;
-			guiTexts[index].enabled = false;
-			index++;
 			if (index < 7){
+				guiTexts[index].enabled = false;
+				index++;
 				guiTexts[index].enabled = true;
 			}
 			//counterText.enabled = true;
@@ -54,6 +60,7 @@ public class VoiceThreshold : MonoBehaviour {
 				noise.clip = scream;
 				noise.loop = false;
 				noise.Play();
+				mustChange = true;
 			}
 			//counterText.text = "" + counter;
 		}
