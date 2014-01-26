@@ -13,7 +13,7 @@ public class Fingers : MonoBehaviour {
 	private bool isMoving = true;
 	private float speedModule = 0.1f;
 	private Vector3 speedDirection = new Vector3(-1, 0, 0);
-	private const float offset = 0.085f;
+	private const float offset = 0.095f;
 	private float oppositeForceModule;
 	private Vector3 oppositeForceDirection = new Vector3(1, 0, 0);
 	private bool insert = false;
