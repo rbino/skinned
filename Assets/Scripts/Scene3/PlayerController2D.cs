@@ -10,6 +10,9 @@ public class PlayerController2D : MonoBehaviour {
 
 	public Transform PlayerInitialPos;
 	Transform DoorAnimation;
+	 
+	GameObject DoorLockSound;
+	bool DoorLocked = false;
 
 	bool moved = false;
 	bool nearDoor = false;
@@ -20,6 +23,9 @@ public class PlayerController2D : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+		DoorLockSound = GameObject.Find ("SoundDoorLocked");
+
 		initialPos = transform.position;
 		finalPos = new Vector3(initialPos.x + DeltaMove, initialPos.y, 
 		                       initialPos.z);
@@ -56,13 +62,19 @@ public class PlayerController2D : MonoBehaviour {
 				transform.GetChild(1).GetComponent<CharacterAnimationController>().StopMoving();
 			}
 
+			if(Input.GetKey(KeyCode.UpArrow) && DoorLocked){
+				DoorLockSound.audio.Play ();
+			}
+
+
 
 			if(Input.GetKey(KeyCode.UpArrow) && nearDoor){
+				
 				collider2D.enabled = false;
 				renderer.enabled = false;
 				rigidbody2D.velocity = new Vector2(0, 0);
 				DoorAnimation.GetComponent<DoorAnimationControl>().OpenDoor();
-
+				
 			}
 
 		}
@@ -102,6 +114,14 @@ public class PlayerController2D : MonoBehaviour {
 
 	public void ResetPlayerPosition(){
 		transform.position = PlayerInitialPos.position;
+	}
+
+	public void setLockDoor(){
+		DoorLocked = true;
+	}
+
+	public void resetLockDoor(){
+		DoorLocked = false;
 	}
 
 
