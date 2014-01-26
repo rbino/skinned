@@ -6,7 +6,7 @@ public class MicrophoneInput : MonoBehaviour {
 	private string device;
 	private AudioClip clipRecord;
 	private float[] avg;
-	private int avgSize = 25;
+	private int avgSize = 15;
 	private int ix = 0;
 	private float avgSum = 0;
 	float min=100f;
