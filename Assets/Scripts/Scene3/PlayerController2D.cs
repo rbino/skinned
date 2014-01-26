@@ -9,7 +9,7 @@ public class PlayerController2D : MonoBehaviour {
 	public float xSmooth;
 
 	public Transform PlayerInitialPos;
-	public Transform DoorAnimation;
+	Transform DoorAnimation;
 
 	bool moved = false;
 	bool nearDoor = false;
@@ -24,6 +24,7 @@ public class PlayerController2D : MonoBehaviour {
 		finalPos = new Vector3(initialPos.x + DeltaMove, initialPos.y, 
 		                       initialPos.z);
 		startTime = Time.time;
+		transform.GetChild(1).GetComponent<CharacterAnimationController>().StopMoving();
 
 		renderer = transform.GetChild(1).renderer;
 	}
@@ -46,19 +47,20 @@ public class PlayerController2D : MonoBehaviour {
 			}
 
 			if(Input.GetKey(KeyCode.LeftArrow)){
-				transform.GetChild(1).GetComponent<CharacterAnimationController>().StartMoveRight();
+				transform.GetChild(1).GetComponent<CharacterAnimationController>().StartMoveLeft();
 				rigidbody2D.velocity = new Vector2(-speed, 0);
 			}
 
 			if(Input.GetKeyUp(KeyCode.LeftArrow)){
 				rigidbody2D.velocity = new Vector2(0, 0);
+				transform.GetChild(1).GetComponent<CharacterAnimationController>().StopMoving();
 			}
 
 
 			if(Input.GetKey(KeyCode.UpArrow) && nearDoor){
 				collider2D.enabled = false;
 				renderer.enabled = false;
-
+				rigidbody2D.velocity = new Vector2(0, 0);
 				DoorAnimation.GetComponent<DoorAnimationControl>().OpenDoor();
 
 			}
@@ -93,8 +95,9 @@ public class PlayerController2D : MonoBehaviour {
 		}
 	}
 
-	public void NearDoor(bool cond){
+	public void NearDoor(bool cond, Transform doorAnimation){
 		nearDoor = cond;
+		DoorAnimation = doorAnimation;
 	}
 
 	public void ResetPlayerPosition(){

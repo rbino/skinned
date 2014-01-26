@@ -19,7 +19,7 @@ public class ChangeCorridorLevel : MonoBehaviour {
 
 		if(other.tag == "Player"){
 			//camera.GetComponent<CameraMove>().BeginMoveDown();
-			other.gameObject.transform.position += Vector3.down*2f;
+			other.gameObject.transform.position += Vector3.down*1.8f;
 		}
 	}
 }
