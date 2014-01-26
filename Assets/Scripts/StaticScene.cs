@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Scene0 : MonoBehaviour {
+public class StaticScene : MonoBehaviour {
 
 	public string nextScene;
 

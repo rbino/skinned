@@ -18,10 +18,13 @@ public class MusicAct5 : MonoBehaviour {
 	public void ChangeClip (int clipNumber) {
 		if (clipNumber == 1) {
 			gameObject.GetComponent<AudioSource>().clip = music1;
+			gameObject.GetComponent<AudioSource>().Play();
 		} else if (clipNumber == 2) {
-			gameObject.GetComponent<AudioSource>().clip = music2;			
+			gameObject.GetComponent<AudioSource>().clip = music2;
+			gameObject.GetComponent<AudioSource>().Play();			
 		} else if (clipNumber == 3) {
-			gameObject.GetComponent<AudioSource>().clip = music3;			
+			gameObject.GetComponent<AudioSource>().clip = music3;
+			gameObject.GetComponent<AudioSource>().Play();			
 		}
 	}
 }
