@@ -21,6 +21,7 @@ public class Fingers : MonoBehaviour {
 	private bool stage2 = false;
 
 	public GUIText thoughts;
+	private GameObject music;
 
 	// Use this for initialization
 	void Start () {
@@ -28,6 +29,7 @@ public class Fingers : MonoBehaviour {
 		startX = start.GetComponent<Transform>().position.x;
 		startDimension = start.GetComponent<Transform>().localScale.x;
 		endX = end.GetComponent<Transform>().position.x;
+		music = GameObject.Find("Music");
 	}
 	
 	// Update is called once per frame
@@ -72,8 +74,9 @@ public class Fingers : MonoBehaviour {
 				endX = end.GetComponent<Transform>().position.x;
 				stage2 = true;
 			} else {
-				Debug.Log("End");
-				//Application.LoadLevel("Act3Scene3");
+				//Debug.Log("End");
+				Destroy(music);
+				Application.LoadLevel("Act3Scene3");
 			}
 		}
 	}
