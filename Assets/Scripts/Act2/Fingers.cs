@@ -20,6 +20,8 @@ public class Fingers : MonoBehaviour {
 	private bool stage1 = false;
 	private bool stage2 = false;
 
+	public GUIText thoughts;
+
 	// Use this for initialization
 	void Start () {
 		startX = start.GetComponent<Transform>().position.x;
