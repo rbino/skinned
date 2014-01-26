@@ -7,26 +7,33 @@ public class Fingers : MonoBehaviour {
 	public GameObject start;
 	public GameObject end;
 	private float startX;
+	private float startDimension;
 	private float endX;
 
+	private bool isMoving = true;
 	private float speedModule = 0.1f;
 	private Vector3 speedDirection = new Vector3(-1, 0, 0);
 	private const float offset = 0.085f;
 	private float oppositeForceModule;
 	private Vector3 oppositeForceDirection = new Vector3(1, 0, 0);
 	private bool insert = false;
+	private bool stage1 = false;
+	private bool stage2 = false;
 
 	// Use this for initialization
 	void Start () {
 		startX = start.GetComponent<Transform>().position.x;
+		startDimension = start.GetComponent<Transform>().localScale.x;
 		endX = end.GetComponent<Transform>().position.x;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.LeftArrow)) {
-			//fingers go ahead a little
-			transform.position = transform.position + (speedDirection * speedModule);
+		if (isMoving) {
+			if (Input.GetKeyDown(KeyCode.LeftArrow)) {
+				//fingers go ahead a little
+				transform.position = transform.position + (speedDirection * speedModule);
+			}
 		}
 		if (insert) {
 			UpdateOppositeForceModule();
@@ -35,8 +42,8 @@ public class Fingers : MonoBehaviour {
 	}
 
 	private void UpdateOppositeForceModule () {
-		float fingersProgress = transform.position.x - startX;
-		float endDistance = endX - startX;
+		float fingersProgress = transform.position.x - startX - (startDimension / 2);
+		float endDistance = endX - startX - (startDimension / 2);
 		oppositeForceModule = (fingersProgress * (speedModule - offset)) / endDistance;
 	}
 
@@ -48,7 +55,19 @@ public class Fingers : MonoBehaviour {
 			}
 		}
 		if (other.gameObject.name.Equals("DeepThroat")) {
-			Debug.Log("End");
+			if (!stage1) {
+				 isMoving = false;
+				face.GetComponent<Face>().SetStage2();
+				endX = end.GetComponent<Transform>().position.x;
+				stage1 = true;
+			} else if (!stage2) {
+				isMoving = false;
+				face.GetComponent<Face>().SetStage3();
+				endX = end.GetComponent<Transform>().position.x;
+				stage2 = true;
+			} else {
+				Debug.Log("End");
+			}
 		}
 	}
 
@@ -57,6 +76,7 @@ public class Fingers : MonoBehaviour {
 			if (insert) {
 				insert = false;
 				oppositeForceModule = 0;
+				isMoving = true;
 				face.GetComponent<Face>().ChangeSprite();
 			}
 		}
