@@ -18,7 +18,7 @@ public class ChangeCorridorLevel : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 
 		if(other.tag == "Player"){
-			camera.GetComponent<CameraMove>().BeginMoveDown();
+			//camera.GetComponent<CameraMove>().BeginMoveDown();
 			other.gameObject.transform.position += Vector3.down*2f;
 		}
 	}

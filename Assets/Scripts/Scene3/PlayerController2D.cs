@@ -14,6 +14,8 @@ public class PlayerController2D : MonoBehaviour {
 	bool moved = false;
 	bool nearDoor = false;
 
+	Renderer renderer;
+
 	Vector3 initialPos, finalPos;
 
 	// Use this for initialization
@@ -22,6 +24,8 @@ public class PlayerController2D : MonoBehaviour {
 		finalPos = new Vector3(initialPos.x + DeltaMove, initialPos.y, 
 		                       initialPos.z);
 		startTime = Time.time;
+
+		renderer = transform.GetChild(1).renderer;
 	}
 
 	// Update is called once per frame
@@ -32,17 +36,17 @@ public class PlayerController2D : MonoBehaviour {
 			if(Input.GetKey(KeyCode.RightArrow)){
 
 				rigidbody2D.velocity = new Vector2(speed, 0);
-				GetComponent<CharacterAnimationController>().StartMoveRight();
+				transform.GetChild(1).GetComponent<CharacterAnimationController>().StartMoveRight();
 
 			}
 
 			if(Input.GetKeyUp(KeyCode.RightArrow)){
 				rigidbody2D.velocity = new Vector2(0, 0);
-				//GetComponent<CharacterAnimationController>().StopMoving();
+				transform.GetChild(1).GetComponent<CharacterAnimationController>().StopMoving();
 			}
 
 			if(Input.GetKey(KeyCode.LeftArrow)){
-
+				transform.GetChild(1).GetComponent<CharacterAnimationController>().StartMoveRight();
 				rigidbody2D.velocity = new Vector2(-speed, 0);
 			}
 
