@@ -20,7 +20,7 @@ public class A1S4SoundEffect : MonoBehaviour {
 		Timer += Time.deltaTime;
 
 		if(Timer >= TimeOut){
-			playFlash();
+			playApplauso();
 			//Invoke ("playFlash", 0.01f);
 			//Invoke ("playFlash", 0.05f);
 			//Invoke ("playApplauso", 0.02f);

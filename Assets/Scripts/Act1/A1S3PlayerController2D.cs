@@ -60,7 +60,7 @@ public class A1S3PlayerController2D: MonoBehaviour {
 				transform.GetChild(1).GetComponent<CharacterAnimationController>().SitDown();
 				StartCoroutine(ShowLegs());
 				canMove = false;
-				Invoke("NextLevel", 0.06f);
+				Invoke("NextLevel", 1f);
 			}
 		}
 	
