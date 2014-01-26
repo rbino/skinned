@@ -8,6 +8,8 @@ public class A3S1PlayerController : MonoBehaviour {
 	public float startTime;
 	public float xSmooth;
 	private bool canMove=true;
+	public AudioClip shut;
+	public AudioClip click;
 	
 	public Transform PlayerInitialPos;
 	Transform DoorAnimation;
@@ -63,6 +65,7 @@ public class A3S1PlayerController : MonoBehaviour {
 				DoorAnimation.GetComponent<A3S1DoorAnimationControl>().CloseDoor();
 				nearDoor = false;
 				canMove = false;
+				StartCoroutine(WaitAndShut());
 			}
 		}
 	}
@@ -72,6 +75,15 @@ public class A3S1PlayerController : MonoBehaviour {
 		if(moved){
 			move();
 		}
+	}
+
+	IEnumerator WaitAndShut(){
+		yield return new WaitForSeconds (0.1f);
+		AudioSource.PlayClipAtPoint (shut, transform.position);
+		yield return new WaitForSeconds (1.5f);
+		AudioSource.PlayClipAtPoint (click, transform.position);
+		yield return new WaitForSeconds (2.0f);
+		Application.LoadLevel ("Act3Scene2");
 	}
 	
 	void move(){

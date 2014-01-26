@@ -10,7 +10,6 @@ public class A3S1DoorAnimationControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
 	}
 
 	public void CloseDoor(){
