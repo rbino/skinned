@@ -4,6 +4,8 @@ using System.Collections;
 public class DoorAnimationControl : MonoBehaviour {
 
 	private Animator animator;
+
+	public GameObject soundOpen, soundClose;
 	
 	// Use this for initialization
 	void Start()
@@ -18,6 +20,13 @@ public class DoorAnimationControl : MonoBehaviour {
 
 	public void OpenDoor(){
 		animator.SetTrigger("DoorOpened");
+		soundOpen.audio.Play();
+		Invoke ("PlayCloseDoor", 0.01f);
+
+	}
+
+	void PlayCloseDoor(){
+		soundClose.audio.Play();
 	}
 
 
