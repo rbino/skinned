@@ -7,6 +7,7 @@ public class A3S1PlayerController : MonoBehaviour {
 	public float speed = 2f;
 	public float startTime;
 	public float xSmooth;
+	private bool canMove=true;
 	
 	public Transform PlayerInitialPos;
 	Transform DoorAnimation;
@@ -31,38 +32,39 @@ public class A3S1PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-		if(Input.GetKey(KeyCode.RightArrow)){
+		if (canMove){
+			if(Input.GetKey(KeyCode.RightArrow)){
+				
+				rigidbody2D.velocity = new Vector2(speed, 0);
+				transform.GetChild(1).GetComponent<CharacterAnimationController>().StartMoveRight();
+				
+			}
 			
-			rigidbody2D.velocity = new Vector2(speed, 0);
-			transform.GetChild(1).GetComponent<CharacterAnimationController>().StartMoveRight();
+			if(Input.GetKeyUp(KeyCode.RightArrow)){
+				rigidbody2D.velocity = new Vector2(0, 0);
+				transform.GetChild(1).GetComponent<CharacterAnimationController>().StopMoving();
+			}
 			
-		}
-		
-		if(Input.GetKeyUp(KeyCode.RightArrow)){
-			rigidbody2D.velocity = new Vector2(0, 0);
-			transform.GetChild(1).GetComponent<CharacterAnimationController>().StopMoving();
-		}
-		
-		if(Input.GetKey(KeyCode.LeftArrow)){
-			transform.GetChild(1).GetComponent<CharacterAnimationController>().StartMoveLeft();
-			rigidbody2D.velocity = new Vector2(-speed, 0);
-		}
-		
-		if(Input.GetKeyUp(KeyCode.LeftArrow)){
-			rigidbody2D.velocity = new Vector2(0, 0);
-			transform.GetChild(1).GetComponent<CharacterAnimationController>().StopMoving();
-		}
+			if(Input.GetKey(KeyCode.LeftArrow)){
+				transform.GetChild(1).GetComponent<CharacterAnimationController>().StartMoveLeft();
+				rigidbody2D.velocity = new Vector2(-speed, 0);
+			}
+			
+			if(Input.GetKeyUp(KeyCode.LeftArrow)){
+				rigidbody2D.velocity = new Vector2(0, 0);
+				transform.GetChild(1).GetComponent<CharacterAnimationController>().StopMoving();
+			}
 
-		
-		if(Input.GetKeyDown(KeyCode.UpArrow) && nearDoor){
-			rigidbody2D.velocity = new Vector2(0, 0);
-			transform.position = new Vector3(transform.position.x, -0.27f, transform.position.x);
-			renderer.sortingOrder = 1;
-			DoorAnimation.GetComponent<A3S1DoorAnimationControl>().CloseDoor();
-			nearDoor = false;
+			
+			if(Input.GetKeyDown(KeyCode.UpArrow) && nearDoor){
+				rigidbody2D.velocity = new Vector2(0, 0);
+				transform.position = new Vector3(transform.position.x, -0.27f, transform.position.x);
+				renderer.sortingOrder = 1;
+				DoorAnimation.GetComponent<A3S1DoorAnimationControl>().CloseDoor();
+				nearDoor = false;
+				canMove = false;
+			}
 		}
-		
 	}
 	
 	void FixedUpdate(){

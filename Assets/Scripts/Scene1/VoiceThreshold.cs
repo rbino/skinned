@@ -38,7 +38,7 @@ public class VoiceThreshold : MonoBehaviour {
 		square = other;
 		if (backHome){
 			backHome = false;
-			if (index < 7){
+			if (index < 6){
 				guiTexts[index].enabled = false;
 				index++;
 				guiTexts[index].enabled = true;
