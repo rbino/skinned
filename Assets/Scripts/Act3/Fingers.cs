@@ -20,12 +20,11 @@ public class Fingers : MonoBehaviour {
 	private bool stage1 = false;
 	private bool stage2 = false;
 
-	public GUIText thoughts;
+	public GameObject thoughts;
 	private GameObject music;
 
 	// Use this for initialization
 	void Start () {
-		thoughts.text = "I must do it!";
 		startX = start.GetComponent<Transform>().position.x;
 		startDimension = start.GetComponent<Transform>().localScale.x;
 		endX = end.GetComponent<Transform>().position.x;
@@ -57,19 +56,19 @@ public class Fingers : MonoBehaviour {
 			if (!insert) {
 				insert = true;
 				face.GetComponent<Face>().ChangeSprite();
-				thoughts.color = Color.white;
+				thoughts.GetComponent<Thoughts>().ChangeColor();
 			}
 		}
 		if (other.gameObject.name.Equals("DeepThroat")) {
 			if (!stage1) {
 				isMoving = false;
-				thoughts.text = "It's too difficult.";
+				thoughts.GetComponent<Thoughts>().Phrase2();
 				face.GetComponent<Face>().SetStage2();
 				endX = end.GetComponent<Transform>().position.x;
 				stage1 = true;
 			} else if (!stage2) {
 				isMoving = false;
-				thoughts.text = "It's unbearable.";
+				thoughts.GetComponent<Thoughts>().Phrase3();
 				face.GetComponent<Face>().SetStage3();
 				endX = end.GetComponent<Transform>().position.x;
 				stage2 = true;
@@ -88,7 +87,7 @@ public class Fingers : MonoBehaviour {
 				oppositeForceModule = 0;
 				isMoving = true;
 				face.GetComponent<Face>().ChangeSprite();
-				thoughts.color = Color.black;
+				thoughts.GetComponent<Thoughts>().ChangeColor();
 			}
 		}
 	}
