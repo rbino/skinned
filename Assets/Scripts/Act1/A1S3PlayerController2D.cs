@@ -7,12 +7,14 @@ public class A1S3PlayerController2D: MonoBehaviour {
 	public float speed = 2f;
 	public float startTime;
 	public float xSmooth;
+	public SpriteRenderer legs;
 
 	public Transform PlayerInitialPos;
 	Transform DoorAnimation;
 
+	bool canMove = true;
+	bool nearChair = false;
 	bool moved = false;
-	bool nearDoor = false;
 
 	Renderer renderer;
 
@@ -24,43 +26,41 @@ public class A1S3PlayerController2D: MonoBehaviour {
 		finalPos = new Vector3(initialPos.x + DeltaMove, initialPos.y, 
 		                       initialPos.z);
 		startTime = Time.time;
-		transform.GetChild(1).GetComponent<CharacterAnimationController>().StopMoving();
-
 		renderer = transform.GetChild(1).renderer;
 	}
 
 	// Update is called once per frame
 	void Update () {
-
-		if(Input.GetKey(KeyCode.RightArrow)){
-
-			rigidbody2D.velocity = new Vector2(speed, 0);
-			transform.GetChild(1).GetComponent<CharacterAnimationController>().StartMoveRight();
-
-		}
-
-		if(Input.GetKeyUp(KeyCode.RightArrow)){
-			rigidbody2D.velocity = new Vector2(0, 0);
-			transform.GetChild(1).GetComponent<CharacterAnimationController>().StopMoving();
-		}
-
-		if(Input.GetKey(KeyCode.LeftArrow)){
-			transform.GetChild(1).GetComponent<CharacterAnimationController>().StartMoveLeft();
-			rigidbody2D.velocity = new Vector2(-speed, 0);
-		}
-
-		if(Input.GetKeyUp(KeyCode.LeftArrow)){
-			rigidbody2D.velocity = new Vector2(0, 0);
-			transform.GetChild(1).GetComponent<CharacterAnimationController>().StopMoving();
-		}
+		if (canMove){
+			if(Input.GetKey(KeyCode.RightArrow)){
 
 
-		if(Input.GetKey(KeyCode.UpArrow) && nearDoor){
-			collider2D.enabled = false;
-			renderer.enabled = false;
-			rigidbody2D.velocity = new Vector2(0, 0);
-			DoorAnimation.GetComponent<DoorAnimationControl>().OpenDoor();
+				rigidbody2D.velocity = new Vector2(speed, 0);
+				transform.GetChild(1).GetComponent<CharacterAnimationController>().StartMoveRight();
 
+			}
+
+			if(Input.GetKeyUp(KeyCode.RightArrow)){
+				rigidbody2D.velocity = new Vector2(0, 0);
+				transform.GetChild(1).GetComponent<CharacterAnimationController>().StopMoving();
+			}
+
+			if(Input.GetKey(KeyCode.LeftArrow)){
+				transform.GetChild(1).GetComponent<CharacterAnimationController>().StartMoveLeft();
+				rigidbody2D.velocity = new Vector2(-speed, 0);
+			}
+
+			if(Input.GetKeyUp(KeyCode.LeftArrow)){
+				rigidbody2D.velocity = new Vector2(0, 0);
+				transform.GetChild(1).GetComponent<CharacterAnimationController>().StopMoving();
+			}
+
+			if(Input.GetKeyDown(KeyCode.UpArrow) && nearChair){
+				transform.position = new Vector3(-0.003999157f, -0.37f, 0);
+				transform.GetChild(1).GetComponent<CharacterAnimationController>().SitDown();
+				StartCoroutine(ShowLegs());
+				canMove = false;
+			}
 		}
 	
 	}
@@ -70,6 +70,11 @@ public class A1S3PlayerController2D: MonoBehaviour {
 		if(moved){
 			move();
 		}
+	}
+
+	IEnumerator ShowLegs(){
+		yield return new WaitForSeconds(0.25f);
+		legs.enabled = true;
 	}
 
 	void move(){
@@ -84,9 +89,10 @@ public class A1S3PlayerController2D: MonoBehaviour {
 		}
 	}
 
-	public void NearDoor(bool cond, Transform doorAnimation){
-		nearDoor = cond;
-		DoorAnimation = doorAnimation;
+
+
+	public void NearChair(bool cond){
+		nearChair = cond;
 	}
 
 	public void ResetPlayerPosition(){

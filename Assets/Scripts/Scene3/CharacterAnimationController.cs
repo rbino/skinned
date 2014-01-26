@@ -21,4 +21,7 @@ public class CharacterAnimationController : MonoBehaviour {
 	public void StartMoveLeft(){
 		animator.SetInteger("Direction", 2);
 	}
+	public void SitDown(){
+		animator.SetTrigger ("Sit");
+	}
 }
