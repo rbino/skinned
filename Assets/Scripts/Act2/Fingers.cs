@@ -67,6 +67,7 @@ public class Fingers : MonoBehaviour {
 				stage2 = true;
 			} else {
 				Debug.Log("End");
+				//Application.LoadLevel("Act3Scene3");
 			}
 		}
 	}
