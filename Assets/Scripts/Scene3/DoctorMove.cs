@@ -4,7 +4,7 @@ using System.Collections;
 public class DoctorMove : MonoBehaviour {
 
 	enum DoctorState{
-		Normal, Alert
+		Right, Left
 	}
 	
 	public float Speed = 1f;
@@ -18,7 +18,7 @@ public class DoctorMove : MonoBehaviour {
 	float FieldOfViewAngle =  180;
 	float startTime, distance;
 
-	DoctorState state = DoctorState.Normal;
+	DoctorState state = DoctorState.Right;
 
 
 	// Use this for initialization
@@ -40,6 +40,14 @@ public class DoctorMove : MonoBehaviour {
 	}
 
 	void ReturnBack(){
+
+		if(state == DoctorState.Left){
+			state = DoctorState.Right;
+			transform.GetChild(1).GetComponent<DoctorAnimationControl>().StartMoveRight();
+		}else{
+			state = DoctorState.Left;
+			transform.GetChild(1).GetComponent<DoctorAnimationControl>().StartMoveLeft();
+		}
 
 		startTime = Time.time;
 
