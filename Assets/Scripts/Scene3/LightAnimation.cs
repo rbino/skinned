@@ -18,7 +18,7 @@ public class LightAnimation : MonoBehaviour {
 	public float TimeOutLight = .1f;
 	public float TimeOutShadow = 1f;
 
-	bool active = false;
+	bool active = true;
 
 	// Use this for initialization
 	void Start () {
