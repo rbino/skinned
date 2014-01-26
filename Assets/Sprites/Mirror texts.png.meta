@@ -66,10 +66,10 @@ TextureImporter:
     - name: Mirror texts_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 128
-        width: 85
-        height: 18
+        x: 2
+        y: 131
+        width: 81
+        height: 13
       alignment: 0
       pivot: {x: .5, y: .5}
     - name: Mirror texts_3
@@ -86,17 +86,17 @@ TextureImporter:
         serializedVersion: 2
         x: 2
         y: 91
-        width: 64
+        width: 67
         height: 17
       alignment: 0
       pivot: {x: .5, y: .5}
     - name: Mirror texts_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 72
-        width: 105
-        height: 19
+        x: 2
+        y: 73
+        width: 99
+        height: 17
       alignment: 0
       pivot: {x: .5, y: .5}
     - name: Mirror texts_6

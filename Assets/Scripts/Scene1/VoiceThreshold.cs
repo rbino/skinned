@@ -9,11 +9,12 @@ public class VoiceThreshold : MonoBehaviour {
 	private bool backHome=true;
 	private Collider2D square;
 	public SpriteRenderer[] guiTexts;
+	private int index=0;
 	public AudioSource noise;
 
 	// Use this for initialization
 	void Start () {
-//		timer.enabled = false;
+		guiTexts [index].enabled = true;
 	}
 
 	// Update is called once per frame
@@ -28,9 +29,12 @@ public class VoiceThreshold : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other){
 		square = other;
 		if (backHome){
+			guiTexts[index].enabled = false;
+			index++;
+			guiTexts[index].enabled = true;
 			//counterText.enabled = true;
 			if (iteration < 2){
-				if (++counter >= 1){
+				if (++counter >= 3){
 					counter = 0;
 					iteration++;
 					noise.audio.volume += 0.3f;
@@ -38,7 +42,7 @@ public class VoiceThreshold : MonoBehaviour {
 					backHome = false;
 				}
 			} else if (iteration ==2){
-
+				
 			}
 			//counterText.text = "" + counter;
 		}
