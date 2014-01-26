@@ -15,13 +15,13 @@ public class Door : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other){
 		if(other.tag == "Player"){
-			other.GetComponent<PlayerController2D>().NearDoor(true);
+			other.GetComponent<PlayerController2D>().NearDoor(true, transform.GetChild(0));
 		}
 	}
 
 	void OnTriggerExit2D(Collider2D other){
 		if(other.tag == "Player"){
-			other.GetComponent<PlayerController2D>().NearDoor(false);
+			other.GetComponent<PlayerController2D>().NearDoor(false, null);
 		}
 	}
 }
