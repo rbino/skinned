@@ -5,7 +5,7 @@ public class ApplausoSoundController : MonoBehaviour {
 
 	float Timer = 0f;
 	
-	public float TimeOut = 5f;
+	public float TimeOut = 7f;
 
 
 	// Use this for initialization

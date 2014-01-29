@@ -24,4 +24,8 @@ public class CharacterAnimationController : MonoBehaviour {
 	public void SitDown(){
 		animator.SetTrigger ("Sit");
 	}
+
+	public void Collapse(){
+		animator.SetTrigger("collapse");
+	}   
 }
