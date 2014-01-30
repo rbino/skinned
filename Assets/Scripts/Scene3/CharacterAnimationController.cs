@@ -26,6 +26,6 @@ public class CharacterAnimationController : MonoBehaviour {
 	}
 
 	public void Collapse(){
-		animator.SetTrigger("collapse");
+		animator.SetTrigger("Collapse");
 	}   
 }
