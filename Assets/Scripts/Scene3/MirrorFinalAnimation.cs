@@ -6,12 +6,13 @@ public class MirrorFinalAnimation : MonoBehaviour {
 	enum MirrorState{
 		nothing,
 		flickering,
-		collapse
+		collapse,
+		end
 	}
 
 	public float TimeOutFlickering = 0.5f;
 	public int NumberOfFlickering = 4;
-	public Renderer FlickeringObject;
+	public Renderer[] FlickeringObject;
 
 	public GameObject[] players;
 
@@ -35,7 +36,12 @@ public class MirrorFinalAnimation : MonoBehaviour {
 			if(state == MirrorState.collapse){
 				foreach(GameObject player in players)
 					player.transform.GetChild(0).GetComponent<CharacterAnimationController>().Collapse();
+				state = MirrorState.end;
 			}
+
+			if(state == MirrorState.end)
+				Application.Quit();
+				//TODO
 		}
 
 	
@@ -45,13 +51,22 @@ public class MirrorFinalAnimation : MonoBehaviour {
 
 		for(int i = 0; i < NumberOfFlickering; i++){
 
-			if(FlickeringObject.enabled)
-				FlickeringObject.enabled = false;
+			if(FlickeringObject[0].enabled){
+				FlickeringObject[0].enabled = false;
+				FlickeringObject[1].enabled = true;
+			}
 			else
-				FlickeringObject.enabled = true;
+			{
+				FlickeringObject[0].enabled = true;
+				FlickeringObject[1].enabled = false;
+			}
 
 			yield return new WaitForSeconds(TimeOutFlickering);
 		}
+
+		FlickeringObject[0].enabled = false;
+
+		FlickeringObject[1].enabled = true;
 
 		state = MirrorState.collapse;
 

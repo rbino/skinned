@@ -4,7 +4,7 @@ using System.Collections;
 public class PlayerController2DGeneric : MonoBehaviour {
 	
 	public float speed = 1f;
-	public bool mirrored = false;
+	public bool mirrored;
 
 	bool enabled = true;
 	
