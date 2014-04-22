@@ -36,15 +36,20 @@ public class MirrorFinalAnimation : MonoBehaviour {
 			if(state == MirrorState.collapse){
 				foreach(GameObject player in players)
 					player.transform.GetChild(0).GetComponent<CharacterAnimationController>().Collapse();
-				state = MirrorState.end;
+
+				StartCoroutine("SetEndStateWithDelay");
 			}
 
 			if(state == MirrorState.end)
-				Application.Quit();
-				//TODO
+				Application.LoadLevel("Act5End");
 		}
 
 	
+	}
+
+	IEnumerator SetEndStateWithDelay() {
+		yield return new WaitForSeconds(1);
+		state = MirrorState.end;
 	}
 
 	IEnumerator flickering(){
