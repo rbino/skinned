@@ -24,13 +24,13 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 1
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -44,6 +44,1311 @@ TextureImporter:
     textureFormat: -2
     compressionQuality: 50
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: Act1_Title
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 332
+        width: 320
+        height: 180
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Act2_Title
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 332
+        width: 320
+        height: 180
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Act3_Title
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 332
+        width: 320
+        height: 180
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Act4_Title
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 332
+        width: 320
+        height: 180
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Act5_Title
+      rect:
+        serializedVersion: 2
+        x: 1352
+        y: 332
+        width: 320
+        height: 180
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: TheEnd
+      rect:
+        serializedVersion: 2
+        x: 1688
+        y: 332
+        width: 320
+        height: 180
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Credits
+      rect:
+        serializedVersion: 2
+        x: 1688
+        y: 140
+        width: 320
+        height: 180
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Thoughts5
+      rect:
+        serializedVersion: 2
+        x: 1352
+        y: 140
+        width: 320
+        height: 180
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Thoughts4
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 140
+        width: 320
+        height: 180
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Thoughts3
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 140
+        width: 320
+        height: 180
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Thoughts2
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 140
+        width: 320
+        height: 180
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Thoughts1
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 140
+        width: 320
+        height: 180
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: MainMenu
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 19
+        width: 160
+        height: 100
+      alignment: 4
+      pivot: {x: 0, y: .5}
+    - name: Controls
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 1668
+        width: 320
+        height: 180
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Title
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1860
+        width: 320
+        height: 180
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Act1_Scene1
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 1860
+        width: 320
+        height: 180
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Act1_Scene2
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 1859
+        width: 320
+        height: 180
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Act1_Scene3
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 1860
+        width: 320
+        height: 180
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: DressingRoom
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 1860
+        width: 320
+        height: 180
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Act3_Scene1
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1668
+        width: 320
+        height: 180
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: ToiletteDoor1
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 1668
+        width: 320
+        height: 180
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: ToiletteDoor2
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 1668
+        width: 320
+        height: 180
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: ToiletteDoor3
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 1668
+        width: 320
+        height: 180
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: ToiletteDoor4
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 1668
+        width: 320
+        height: 180
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: DressingRoom_MirrorFrame
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 1973
+        width: 33
+        height: 36
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: DressingRoom_MirrorGlass
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 1978
+        width: 23
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: DressingRoom_MirrorBackground
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 1986
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: DressingRoom_Table
+      rect:
+        serializedVersion: 2
+        x: 1649
+        y: 1927
+        width: 178
+        height: 34
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: DressingRoom_Stool
+      rect:
+        serializedVersion: 2
+        x: 1649
+        y: 2015
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Hand_FrontFingers
+      rect:
+        serializedVersion: 2
+        x: 1908
+        y: 1859
+        width: 125
+        height: 69
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Hand_BackFingers
+      rect:
+        serializedVersion: 2
+        x: 1996
+        y: 1954
+        width: 37
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Act3_Scene2_Outside
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1476
+        width: 320
+        height: 180
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Act3_Scene2_Inside
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 1475
+        width: 320
+        height: 180
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Act3_Scene3
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 1476
+        width: 320
+        height: 180
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: WC_Overlay
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 1476
+        width: 320
+        height: 180
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Puke
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1480
+        width: 62
+        height: 171
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Mirror
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1284
+        width: 320
+        height: 180
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Act2_Scene3
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 1284
+        width: 320
+        height: 180
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: She_AtTheMirror
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 1284
+        width: 320
+        height: 180
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: MirrorBackground
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 1284
+        width: 320
+        height: 180
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: ClinicDoor_Close
+      rect:
+        serializedVersion: 2
+        x: 1432
+        y: 1351
+        width: 41
+        height: 73
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: ClinicDoor_Open
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 1351
+        width: 41
+        height: 73
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: ClinicLight_Off
+      rect:
+        serializedVersion: 2
+        x: 1562
+        y: 1386
+        width: 75
+        height: 27
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: ClinicLight_On
+      rect:
+        serializedVersion: 2
+        x: 1689
+        y: 1386
+        width: 75
+        height: 27
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Act5_Scene1
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 732
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Act5_Scene1_LightOff
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 732
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Model_Yellow
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 671
+        width: 16
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Model_Red
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 671
+        width: 13
+        height: 40
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Model_Grey
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 671
+        width: 16
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Model_Green
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 674
+        width: 12
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Model_Blue
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 674
+        width: 19
+        height: 40
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Model_Purple
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 674
+        width: 12
+        height: 40
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: TorchLight_Right
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 678
+        width: 42
+        height: 34
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: TorchLight_Left
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 678
+        width: 42
+        height: 34
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Nurse_Right1
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 598
+        width: 16
+        height: 53
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: Nurse_Right2
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 597
+        width: 24
+        height: 54
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: Nurse_Right3
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 598
+        width: 21
+        height: 53
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: Nurse_Right4
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 598
+        width: 24
+        height: 53
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: Nurse_Right5
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 598
+        width: 21
+        height: 53
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: Nurse_Right6
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 597
+        width: 26
+        height: 54
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: Nurse_Right7
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 597
+        width: 21
+        height: 54
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: Nurse_Right8
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 597
+        width: 25
+        height: 54
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: Nurse_Left1
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 534
+        width: 16
+        height: 53
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: Nurse_Left2
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 533
+        width: 24
+        height: 54
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: Nurse_Left3
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 534
+        width: 21
+        height: 53
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: Nurse_Left4
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 534
+        width: 24
+        height: 53
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: Nurse_Left5
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 534
+        width: 21
+        height: 53
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: Nurse_Left6
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 533
+        width: 26
+        height: 54
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: Nurse_Left7
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 533
+        width: 21
+        height: 54
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: Nurse_Left8
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 533
+        width: 24
+        height: 54
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: MicrophoneIcon
+      rect:
+        serializedVersion: 2
+        x: 1693
+        y: 1969
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: She_Phase1_Right1
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 597
+        width: 22
+        height: 55
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: She_Phase1_Right2
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 597
+        width: 24
+        height: 55
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: She_Phase1_Right3
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 597
+        width: 22
+        height: 55
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: She_Phase1_Right4
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 597
+        width: 21
+        height: 55
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: She_Phase1_Right5
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 596
+        width: 21
+        height: 55
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: She_Phase1_Right6
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 596
+        width: 29
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: She_Phase1_Right7
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 596
+        width: 24
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: She_Phase1_Right8
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 595
+        width: 26
+        height: 57
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: She_Phase1_Left1
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 532
+        width: 21
+        height: 55
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: She_Phase1_Left2
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 532
+        width: 29
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: She_Phase1_Left3
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 532
+        width: 24
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: She_Phase1_Left4
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 531
+        width: 26
+        height: 57
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: She_Phase1_Left5
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 533
+        width: 22
+        height: 55
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: She_Phase1_Left6
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 533
+        width: 24
+        height: 55
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: She_Phase1_Left7
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 533
+        width: 22
+        height: 55
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: She_Phase1_Left8
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 533
+        width: 21
+        height: 55
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: She_Phase2_Right1
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 597
+        width: 17
+        height: 55
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: She_Phase2_Right2
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 597
+        width: 24
+        height: 55
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: She_Phase2_Right3
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 596
+        width: 21
+        height: 55
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: She_Phase2_Right4
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 596
+        width: 21
+        height: 55
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: She_Phase2_Right5
+      rect:
+        serializedVersion: 2
+        x: 983
+        y: 596
+        width: 21
+        height: 55
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: She_Phase2_Right6
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 596
+        width: 29
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: She_Phase2_Right7
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 596
+        width: 24
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: She_Phase2_Right8
+      rect:
+        serializedVersion: 2
+        x: 1105
+        y: 595
+        width: 26
+        height: 57
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: She_Phase2_Left1
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 533
+        width: 17
+        height: 55
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: She_Phase2_Left2
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 533
+        width: 24
+        height: 55
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: She_Phase2_Left3
+      rect:
+        serializedVersion: 2
+        x: 1017
+        y: 532
+        width: 21
+        height: 55
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: She_Phase2_Left4
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 532
+        width: 21
+        height: 55
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: She_Phase2_Left5
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 532
+        width: 21
+        height: 55
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: She_Phase2_Left6
+      rect:
+        serializedVersion: 2
+        x: 873
+        y: 532
+        width: 29
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: She_Phase2_Left7
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 532
+        width: 24
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: She_Phase2_Left8
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 531
+        width: 26
+        height: 57
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: She_Phase1_Sitting1
+      rect:
+        serializedVersion: 2
+        x: 1558
+        y: 597
+        width: 22
+        height: 55
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: She_Phase1_Sitting2
+      rect:
+        serializedVersion: 2
+        x: 1593
+        y: 597
+        width: 16
+        height: 55
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: She_Phase1_Sitting3
+      rect:
+        serializedVersion: 2
+        x: 1627
+        y: 597
+        width: 15
+        height: 55
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: She_Phase1_Sitting4_Torso
+      rect:
+        serializedVersion: 2
+        x: 1663
+        y: 597
+        width: 17
+        height: 55
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: She_Phase1_Sitting4_Legs
+      rect:
+        serializedVersion: 2
+        x: 1689
+        y: 597
+        width: 11
+        height: 55
+      alignment: 2
+      pivot: {x: .5, y: 1}
+    - name: She_Phase3_Right1
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 597
+        width: 15
+        height: 53
+      alignment: 7
+      pivot: {x: .5, y: 0}
+    - name: She_Phase3_Right2
+      rect:
+        serializedVersion: 2
+        x: 1195
+        y: 597
+        width: 17
+        height: 51
+      alignment: 7
+      pivot: {x: .5, y: 0}
+    - name: She_Phase3_Right3
+      rect:
+        serializedVersion: 2
+        x: 1221
+        y: 597
+        width: 16
+        height: 51
+      alignment: 7
+      pivot: {x: .5, y: 0}
+    - name: She_Phase3_Right4
+      rect:
+        serializedVersion: 2
+        x: 1245
+        y: 597
+        width: 16
+        height: 49
+      alignment: 7
+      pivot: {x: .5, y: 0}
+    - name: She_Phase3_Right5
+      rect:
+        serializedVersion: 2
+        x: 1273
+        y: 597
+        width: 15
+        height: 49
+      alignment: 7
+      pivot: {x: .5, y: 0}
+    - name: She_Phase3_Right6
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 597
+        width: 19
+        height: 49
+      alignment: 7
+      pivot: {x: .5, y: 0}
+    - name: She_Phase3_Right7
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 597
+        width: 15
+        height: 52
+      alignment: 7
+      pivot: {x: .5, y: 0}
+    - name: She_Phase3_Left1
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 531
+        width: 15
+        height: 55
+      alignment: 7
+      pivot: {x: .5, y: 0}
+    - name: She_Phase3_Left2
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 533
+        width: 17
+        height: 51
+      alignment: 7
+      pivot: {x: .5, y: 0}
+    - name: She_Phase3_Left3
+      rect:
+        serializedVersion: 2
+        x: 1266
+        y: 533
+        width: 16
+        height: 51
+      alignment: 7
+      pivot: {x: .5, y: 0}
+    - name: She_Phase3_Left4
+      rect:
+        serializedVersion: 2
+        x: 1242
+        y: 533
+        width: 16
+        height: 49
+      alignment: 7
+      pivot: {x: .5, y: 0}
+    - name: She_Phase3_Left5
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 533
+        width: 15
+        height: 49
+      alignment: 7
+      pivot: {x: .5, y: 0}
+    - name: She_Phase3_Left6
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 533
+        width: 19
+        height: 49
+      alignment: 7
+      pivot: {x: .5, y: 0}
+    - name: She_Phase3_Left7
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 533
+        width: 15
+        height: 52
+      alignment: 7
+      pivot: {x: .5, y: 0}
+    - name: She_Phase3_Falling_Right1
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 597
+        width: 15
+        height: 52
+      alignment: 7
+      pivot: {x: .5, y: 0}
+    - name: She_Phase3_Falling_Right2
+      rect:
+        serializedVersion: 2
+        x: 1395
+        y: 597
+        width: 17
+        height: 50
+      alignment: 7
+      pivot: {x: .5, y: 0}
+    - name: She_Phase3_Falling_Right3
+      rect:
+        serializedVersion: 2
+        x: 1423
+        y: 597
+        width: 26
+        height: 38
+      alignment: 7
+      pivot: {x: .5, y: 0}
+    - name: She_Phase3_Falling_Right4
+      rect:
+        serializedVersion: 2
+        x: 1464
+        y: 594
+        width: 40
+        height: 23
+      alignment: 7
+      pivot: {x: .5, y: 0}
+    - name: She_Phase3_Falling_Left1
+      rect:
+        serializedVersion: 2
+        x: 1489
+        y: 533
+        width: 15
+        height: 52
+      alignment: 7
+      pivot: {x: .5, y: 0}
+    - name: She_Phase3_Falling_Left2
+      rect:
+        serializedVersion: 2
+        x: 1457
+        y: 533
+        width: 17
+        height: 50
+      alignment: 7
+      pivot: {x: .5, y: 0}
+    - name: She_Phase3_Falling_Left3
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 533
+        width: 26
+        height: 38
+      alignment: 7
+      pivot: {x: .5, y: 0}
+    - name: She_Phase3_Falling_Left4
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 530
+        width: 40
+        height: 23
+      alignment: 7
+      pivot: {x: .5, y: 0}
+    - name: Act3_Scene2_Text3_Balck
+      rect:
+        serializedVersion: 2
+        x: 1698
+        y: 1523
+        width: 94
+        height: 15
+      alignment: 4
+      pivot: {x: 0, y: .5}
+    - name: Act3_Scene2_Text2_Black
+      rect:
+        serializedVersion: 2
+        x: 1698
+        y: 1546
+        width: 94
+        height: 15
+      alignment: 4
+      pivot: {x: 0, y: .5}
+    - name: Act3_Scene2_Text1_Black
+      rect:
+        serializedVersion: 2
+        x: 1698
+        y: 1569
+        width: 72
+        height: 15
+      alignment: 4
+      pivot: {x: 0, y: .5}
+    - name: Act3_Scene2_Text1_White
+      rect:
+        serializedVersion: 2
+        x: 1698
+        y: 1638
+        width: 72
+        height: 15
+      alignment: 4
+      pivot: {x: 0, y: .5}
+    - name: Act3_Scene2_Text2_White
+      rect:
+        serializedVersion: 2
+        x: 1698
+        y: 1615
+        width: 94
+        height: 15
+      alignment: 4
+      pivot: {x: 0, y: .5}
+    - name: Act3_Scene2_Text3_White
+      rect:
+        serializedVersion: 2
+        x: 1698
+        y: 1592
+        width: 94
+        height: 15
+      alignment: 4
+      pivot: {x: 0, y: .5}
+    - name: Act2_Scene3_Text1
+      rect:
+        serializedVersion: 2
+        x: 1835
+        y: 1633
+        width: 103
+        height: 20
+      alignment: 4
+      pivot: {x: 0, y: .5}
+    - name: Act2_Scene3_Text2
+      rect:
+        serializedVersion: 2
+        x: 1835
+        y: 1610
+        width: 65
+        height: 20
+      alignment: 4
+      pivot: {x: 0, y: .5}
+    - name: Act2_Scene3_Text3
+      rect:
+        serializedVersion: 2
+        x: 1835
+        y: 1592
+        width: 82
+        height: 15
+      alignment: 4
+      pivot: {x: 0, y: .5}
+    - name: Act2_Scene3_Text4
+      rect:
+        serializedVersion: 2
+        x: 1835
+        y: 1564
+        width: 112
+        height: 20
+      alignment: 4
+      pivot: {x: 0, y: .5}
+    - name: Act2_Scene3_Text5
+      rect:
+        serializedVersion: 2
+        x: 1835
+        y: 1541
+        width: 74
+        height: 20
+      alignment: 4
+      pivot: {x: 0, y: .5}
+    - name: Act2_Scene3_Text6
+      rect:
+        serializedVersion: 2
+        x: 1835
+        y: 1523
+        width: 68
+        height: 15
+      alignment: 4
+      pivot: {x: 0, y: .5}
+    - name: Act2_Scene3_Text7
+      rect:
+        serializedVersion: 2
+        x: 1835
+        y: 1500
+        width: 99
+        height: 15
+      alignment: 4
+      pivot: {x: 0, y: .5}
+    - name: Act2_Scene3_Louder1
+      rect:
+        serializedVersion: 2
+        x: 1835
+        y: 1477
+        width: 44
+        height: 15
+      alignment: 4
+      pivot: {x: 0, y: .5}
+    - name: Act2_Scene3_Louder2
+      rect:
+        serializedVersion: 2
+        x: 1835
+        y: 1454
+        width: 58
+        height: 15
+      alignment: 4
+      pivot: {x: 0, y: .5}
   spritePackingTag: 
   userData: 
