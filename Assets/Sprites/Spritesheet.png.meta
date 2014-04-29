@@ -198,7 +198,7 @@ TextureImporter:
         height: 180
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: Act1_Scene3
+    - name: Act1_Scene4
       rect:
         serializedVersion: 2
         x: 992
