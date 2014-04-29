@@ -313,8 +313,8 @@ TextureImporter:
         y: 1859
         width: 125
         height: 69
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 4
+      pivot: {x: 0, y: .5}
     - name: Hand_BackFingers
       rect:
         serializedVersion: 2
@@ -1222,8 +1222,8 @@ TextureImporter:
         y: 1523
         width: 94
         height: 15
-      alignment: 4
-      pivot: {x: 0, y: .5}
+      alignment: 0
+      pivot: {x: .5, y: .5}
     - name: Act3_Scene2_Text2_Black
       rect:
         serializedVersion: 2
@@ -1231,8 +1231,8 @@ TextureImporter:
         y: 1546
         width: 94
         height: 15
-      alignment: 4
-      pivot: {x: 0, y: .5}
+      alignment: 0
+      pivot: {x: .5, y: .5}
     - name: Act3_Scene2_Text1_Black
       rect:
         serializedVersion: 2
@@ -1240,8 +1240,8 @@ TextureImporter:
         y: 1569
         width: 72
         height: 15
-      alignment: 4
-      pivot: {x: 0, y: .5}
+      alignment: 0
+      pivot: {x: .5, y: .5}
     - name: Act3_Scene2_Text1_White
       rect:
         serializedVersion: 2
@@ -1249,8 +1249,8 @@ TextureImporter:
         y: 1638
         width: 72
         height: 15
-      alignment: 4
-      pivot: {x: 0, y: .5}
+      alignment: 0
+      pivot: {x: .5, y: .5}
     - name: Act3_Scene2_Text2_White
       rect:
         serializedVersion: 2
@@ -1258,8 +1258,8 @@ TextureImporter:
         y: 1615
         width: 94
         height: 15
-      alignment: 4
-      pivot: {x: 0, y: .5}
+      alignment: 0
+      pivot: {x: .5, y: .5}
     - name: Act3_Scene2_Text3_White
       rect:
         serializedVersion: 2
@@ -1267,8 +1267,8 @@ TextureImporter:
         y: 1592
         width: 94
         height: 15
-      alignment: 4
-      pivot: {x: 0, y: .5}
+      alignment: 0
+      pivot: {x: .5, y: .5}
     - name: Act2_Scene3_Text1
       rect:
         serializedVersion: 2

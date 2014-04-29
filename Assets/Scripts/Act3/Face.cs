@@ -4,8 +4,8 @@ using System.Collections;
 public class Face : MonoBehaviour {
 
 	public GameObject deepThroat;
-	private Vector3 stage2 = new Vector3(0.2f, -0.5f, 0);
-	private Vector3 stage3 = new Vector3(-0.1f, -0.5f, 0);
+	private Vector3 stage2 = new Vector3(0.25f, -0.5f, 0);
+	private Vector3 stage3 = new Vector3(-0.15f, -0.5f, 0);
 
 	public Sprite inside;
 	private Sprite outside;
