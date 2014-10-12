@@ -56,10 +56,11 @@ public class A1S3PlayerController2D: MonoBehaviour {
 			}
 
 			if(Input.GetKeyDown(KeyCode.UpArrow) && nearChair){
+				canMove = false;
+				rigidbody2D.velocity = new Vector2(0, 0); //stop the rigidbody
 				transform.position = new Vector3(-0.003999157f, -0.37f, 0);
 				transform.GetChild(1).GetComponent<CharacterAnimationController>().SitDown();
 				StartCoroutine(ShowLegs());
-				canMove = false;
 				Invoke("NextLevel", 1f);
 			}
 		}

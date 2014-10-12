@@ -7,9 +7,16 @@ public class MusicAct5 : MonoBehaviour {
 	public AudioClip music2;
 	public AudioClip music3;
 
+	void Awake(){
+		GameObject oldMusic = GameObject.Find ("Music");
+		if(oldMusic != null)
+			oldMusic.audio.Pause();
+	}
+
 	// Use this for initialization
 	void Start () {
 		DontDestroyOnLoad(this);
+		ChangeClip(1);
 	}
 	
 	// Update is called once per frame

@@ -10,7 +10,7 @@ public class SoundTrackController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		soundtrack = GameObject.Find("Music");
+		soundtrack = GameObject.Find("MusicAct5");
 	
 	}
 	

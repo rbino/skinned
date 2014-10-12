@@ -14,7 +14,9 @@ public class DoctorMove : MonoBehaviour {
 
 	Transform FieldOfView;
 
-	float FieldOfViewMove =  0.3f;
+	float FieldOfViewMoveRight =  0.225f;
+	float FieldOfViewMoveLeft = - 0.45f;
+	float FieldOfViewMove = 0.255f;
 	float FieldOfViewAngle =  180;
 	float startTime, distance;
 
@@ -44,22 +46,22 @@ public class DoctorMove : MonoBehaviour {
 		if(state == DoctorState.Left){
 			state = DoctorState.Right;
 			transform.GetChild(1).GetComponent<DoctorAnimationControl>().StartMoveRight();
+			FieldOfViewMove = FieldOfViewMoveRight*2;
 		}else{
 			state = DoctorState.Left;
 			transform.GetChild(1).GetComponent<DoctorAnimationControl>().StartMoveLeft();
+			FieldOfViewMove = FieldOfViewMoveLeft;
 		}
 
 		startTime = Time.time;
 
 		DoctorFinalPos.position = DoctorInitialPos.position;
 		DoctorInitialPos.position = transform.position;
-
-		FieldOfViewMove = - FieldOfViewMove;
 		FieldOfViewAngle = - FieldOfViewAngle;
 
 		FieldOfView.position = new Vector3(FieldOfView.transform.position.x + FieldOfViewMove,
-		                                             FieldOfView.transform.position.y,
-		                                             FieldOfView.transform.position.z);
+                                           FieldOfView.transform.position.y,
+                                           FieldOfView.transform.position.z);
 
 		FieldOfView.eulerAngles += new Vector3(0, FieldOfViewAngle, 0);
 	}
