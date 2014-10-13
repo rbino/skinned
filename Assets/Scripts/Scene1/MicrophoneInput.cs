@@ -14,11 +14,16 @@ public class MicrophoneInput : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		if (device == null) {
-			device = Microphone.devices [0];
+		if(RequestAutorization.IsMicrophoneEnabled){
+			if (device == null) {
+				device = Microphone.devices [0];
+			}
+			clipRecord = Microphone.Start(device, true, 999, 44100);
+			avg = new float[avgSize];
 		}
-		clipRecord = Microphone.Start(device, true, 999, 44100);
-		avg = new float[avgSize];
+		else{
+			Application.Quit();
+		}
 		/*
 		while (!(Microphone.GetPosition(device) > 0)) {
 			audio.Play ();
