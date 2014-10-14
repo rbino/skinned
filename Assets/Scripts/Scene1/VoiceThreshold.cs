@@ -59,6 +59,8 @@ public class VoiceThreshold : MonoBehaviour {
 				noise.Stop();
 				noise.clip = scream;
 				noise.loop = false;
+				noise.volume = 1f;
+				noise.priority = 150;
 				noise.Play();
 				mustChange = true;
 			}
